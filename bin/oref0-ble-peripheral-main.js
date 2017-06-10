@@ -1,4 +1,4 @@
-var bleno = require('../..');
+var bleno = require('bleno');
 var CgmService = require('../lib/ble/cgm-service');
 
 var primaryService = new CgmService();
