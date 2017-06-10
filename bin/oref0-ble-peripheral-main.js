@@ -7,7 +7,8 @@ bleno.on('stateChange', function(state) {
     console.log('on -> stateChange: ' + state);
 
     if (state === 'poweredOn') {
-	bleno.startAdvertising('OpenAPS', [primaryService.uuid]);
+	var name = require('os').hostname()
+	bleno.startAdvertising(name, [primaryService.uuid]);
     } else {
 	bleno.stopAdvertising();
     }
