@@ -1,7 +1,7 @@
 var bleno = require('bleno');
-var CgmService = require('../lib/ble/cgm-service');
+var ContinuousGlucoseMonitoring = require('../lib/ble/cgm-service');
 
-var primaryService = new CgmService();
+var primaryService = new ContinuousGlucoseMonitoring();
 
 bleno.on('stateChange', function(state) {
     console.log('on -> stateChange: ' + state);
